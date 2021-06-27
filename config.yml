@@ -1,0 +1,16 @@
+title: test-gh-learning-lab
+description: Testing out the GitHub Learning Lab Course Creator
+template:
+  repo: test-gh-learning-lab-template
+  name: test-gh-learning-lab
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
